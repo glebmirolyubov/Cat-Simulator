@@ -4,15 +4,15 @@
     {
         switch (catSimulator.catMood)
         {
-            case CatSimulator.CatMood.bad:
+            case CatMood.bad:
                 PetWhenBadMood(catSimulator);
                 break;
 
-            case CatSimulator.CatMood.good:
+            case CatMood.good:
                 PetWhenGoodMood(catSimulator);
                 break;
 
-            case CatSimulator.CatMood.excellent:
+            case CatMood.excellent:
                 PetWhenExcellentMood(catSimulator);
                 break;
 
@@ -26,20 +26,20 @@
     private void PetWhenBadMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Angry");
-        catSimulator.reactionText.text = "Царапает";
+        catSimulator.reactionText.text = catSimulator.catActionsSO.getPropertiesObject("Pet").reactionBadMood;
     }
 
     private void PetWhenGoodMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Happy");
-        catSimulator.reactionText.text = "Мурлычет";
-        catSimulator.catMood = CatSimulator.CatMood.excellent;
+        catSimulator.reactionText.text = catSimulator.catActionsSO.getPropertiesObject("Pet").reactionGoodMood;
+        catSimulator.catMood = CatMood.excellent;
     }
 
     private void PetWhenExcellentMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Happy");
-        catSimulator.reactionText.text = "Мурлычет и виляет хвостом";
+        catSimulator.reactionText.text = catSimulator.catActionsSO.getPropertiesObject("Pet").reactionExcellentMood;
     }
 
 }

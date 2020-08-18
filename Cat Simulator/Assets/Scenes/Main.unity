@@ -1103,6 +1103,7 @@ MonoBehaviour:
   reactionText: {fileID: 540941783}
   currentMoodText: {fileID: 2082579091}
   catAnimator: {fileID: 5619985935539407968}
+  catActionsSO: {fileID: 11400000, guid: fa17ddbce8fd1448f9ed22eff01a194a, type: 2}
   catMood: 1
 --- !u!1 &1087604546
 GameObject:

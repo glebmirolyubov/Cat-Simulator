@@ -4,15 +4,15 @@
     {
         switch (catSimulator.catMood)
         {
-            case CatSimulator.CatMood.bad:
+            case CatMood.bad:
                 KickWhenBadMood(catSimulator);
                 break;
 
-            case CatSimulator.CatMood.good:
+            case CatMood.good:
                 KickWhenGoodMood(catSimulator);
                 break;
 
-            case CatSimulator.CatMood.excellent:
+            case CatMood.excellent:
                 KickWhenExcellentMood(catSimulator);
                 break;
 
@@ -26,20 +26,20 @@
     private void KickWhenBadMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Angry");
-        catSimulator.reactionText.text = "Прыгает и кусает за правое ухо";
+        catSimulator.reactionText.text = catSimulator.catActionsSO.getPropertiesObject("Kick").reactionBadMood;
     }
 
     private void KickWhenGoodMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Angry");
-        catSimulator.reactionText.text = "Убегает на ковер и писает";
-        catSimulator.catMood = CatSimulator.CatMood.bad;
+        catSimulator.reactionText.text = catSimulator.catActionsSO.getPropertiesObject("Kick").reactionGoodMood;
+        catSimulator.catMood = CatMood.bad;
     }
 
     private void KickWhenExcellentMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Angry");
-        catSimulator.reactionText.text = "Убегает в другую комнату";
-        catSimulator.catMood = CatSimulator.CatMood.bad;
+        catSimulator.reactionText.text = catSimulator.catActionsSO.getPropertiesObject("Kick").reactionExcellentMood;
+        catSimulator.catMood = CatMood.bad;
     }
 }

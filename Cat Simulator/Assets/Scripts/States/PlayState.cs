@@ -1,18 +1,20 @@
-﻿public class PlayState : ICatState
+﻿using System.Linq;
+
+public class PlayState : ICatState
 {
     public ICatState DoState(CatSimulator catSimulator)
     {
         switch (catSimulator.catMood)
         {
-            case CatSimulator.CatMood.bad:
+            case CatMood.bad:
                 PlayWhenBadMood(catSimulator);
                 break;
 
-            case CatSimulator.CatMood.good:
+            case CatMood.good:
                 PlayWhenGoodMood(catSimulator);
                 break;
 
-            case CatSimulator.CatMood.excellent:
+            case CatMood.excellent:
                 PlayWhenExcellentMood(catSimulator);
                 break;
 
@@ -26,19 +28,19 @@
     private void PlayWhenBadMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Angry");
-        catSimulator.reactionText.text = "Сидит на месте";
+        catSimulator.reactionText.text = catSimulator.catActionsSO.getPropertiesObject("Play").reactionBadMood;
     }
 
     private void PlayWhenGoodMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Happy");
-        catSimulator.reactionText.text = "Медленно бегает за мячиком";
-        catSimulator.catMood = CatSimulator.CatMood.excellent;
+        catSimulator.reactionText.text = catSimulator.catActionsSO.getPropertiesObject("Play").reactionGoodMood;
+        catSimulator.catMood = CatMood.excellent;
     }
 
     private void PlayWhenExcellentMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Happy");
-        catSimulator.reactionText.text = "Носится, как угорелая";
+        catSimulator.reactionText.text = catSimulator.catActionsSO.getPropertiesObject("Play").reactionExcellentMood;
     }
 }

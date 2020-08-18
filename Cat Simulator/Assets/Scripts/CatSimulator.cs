@@ -9,6 +9,7 @@ public class CatSimulator : MonoBehaviour
     public Text reactionText;
     public Text currentMoodText;
     public Animator catAnimator;
+    public CatActionsScriptableObject catActionsSO;
 
     public DefaultState defaultState = new DefaultState();
     public PlayState playState = new PlayState();
@@ -65,12 +66,5 @@ public class CatSimulator : MonoBehaviour
         {
             return "ОТЛИЧНОЕ";
         }
-    }
-
-    public enum CatMood
-    {
-        bad,
-        good,
-        excellent
     }
 }
