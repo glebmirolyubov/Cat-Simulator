@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/*
+ * Written by Gleb Mirolyubov in August 2020.
+ */
+
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -16,6 +19,10 @@ public class CatActionsScriptableObject : ScriptableObject
 
     public List<CatActionsProperties> catActionsList;
 
+    /// <summary>
+    /// <para>This method returns CatActionsProperties object with corresponding state name.</para>
+    /// <para>It is important that the state name and string passed from another method exactly match to find an object.</para>
+    /// </summary>
     public CatActionsProperties getPropertiesObject(string stateName)
     {
         CatActionsProperties properties;

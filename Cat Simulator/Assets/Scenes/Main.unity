@@ -1839,6 +1839,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
+    - target: {fileID: 4712064014845304015, guid: 115ce178360fb4a7b8aced3b9bfe3cb9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -64.96392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712064014845304015, guid: 115ce178360fb4a7b8aced3b9bfe3cb9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -179.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712064014845304015, guid: 115ce178360fb4a7b8aced3b9bfe3cb9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1.7055032
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 115ce178360fb4a7b8aced3b9bfe3cb9, type: 3}
 --- !u!95 &5619985935539407968 stripped

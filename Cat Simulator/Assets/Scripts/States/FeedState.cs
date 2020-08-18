@@ -1,4 +1,8 @@
-﻿public class FeedState : ICatState
+﻿/*
+ * Written by Gleb Mirolyubov in August 2020.
+ */
+
+public class FeedState : ICatState
 {
     public ICatState DoState(CatSimulator catSimulator)
     {
@@ -23,6 +27,9 @@
         return catSimulator.defaultState;
     }
 
+    /// <summary>
+    /// <para>This runs commands when the player feeds the cat in a bad mood.</para>
+    /// </summary>
     private void FeedWhenBadMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Happy");
@@ -30,6 +37,9 @@
         catSimulator.catMood = CatMood.good;
     }
 
+    /// <summary>
+    /// <para>This runs commands when the player feeds the cat in a good mood.</para>
+    /// </summary>
     private void FeedWhenGoodMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Happy");
@@ -37,6 +47,9 @@
         catSimulator.catMood = CatMood.excellent;
     }
 
+    /// <summary>
+    /// <para>This runs commands when the player feeds the cat in an excellent mood.</para>
+    /// </summary>
     private void FeedWhenExcellentMood(CatSimulator catSimulator)
     {
         catSimulator.catAnimator.SetTrigger("Happy");

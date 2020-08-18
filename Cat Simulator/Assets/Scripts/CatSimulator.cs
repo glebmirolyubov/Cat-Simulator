@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ * Written by Gleb Mirolyubov in August 2020.
+ */
+
 using UnityEngine;
 using UnityEngine.UI;
 
